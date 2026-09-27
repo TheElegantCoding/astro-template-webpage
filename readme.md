@@ -339,7 +339,7 @@ const onRequest = defineMiddleware(async (context, next) =>
 export { onRequest };
 ```
 
-That's all the configuration nedeed for i18n in this project.
+That's all the configuration needed for i18n in this project.
 
 <p align="right">
   ( <a href="#astro-template-webpage">
