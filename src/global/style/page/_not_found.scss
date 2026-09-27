@@ -1,7 +1,6 @@
 @use 'global/style/config' as *;
 
-.not-found
-{
+.not-found {
   display: flex;
   flex-direction: column;
   gap: $spacing_56;
@@ -10,22 +9,19 @@
   min-height: 100vh;
 }
 
-.not-found__letter
-{
+.not-found__letter {
   font-size: 40vw;
   color: $gray_100;
   text-shadow: 0 $spacing_8 $spacing_32 rgba($black, 0.3);
 
   @include font_weight(extra_bold);
 
-  @include responsive(small_desktop)
-  {
+  @include responsive(small_desktop) {
     position: absolute;
   }
 }
 
-.not-found__container
-{
+.not-found__container {
   z-index: $z_10;
   display: flex;
   flex-direction: column;
@@ -37,80 +33,67 @@
   border-radius: $rounded_medium;
   box-shadow: $shadow_down_black_200;
 
-  @include responsive(desktop)
-  {
+  @include responsive(desktop) {
     min-width: 65rem;
   }
 
-  @include responsive(small_desktop)
-  {
+  @include responsive(small_desktop) {
     min-width: 50rem;
   }
 }
 
-.not-found__container-title
-{
+.not-found__container-title {
   display: flex;
   gap: $spacing_20;
   align-items: center;
   justify-content: center;
 }
 
-.not-found__title
-{
+.not-found__title {
   font-size: $h1;
   text-align: center;
 
   @include font_weight(extra_bold);
 
-  @include responsive(desktop)
-  {
+  @include responsive(desktop) {
     font-size: $xl2;
   }
 
-  @include responsive(small_desktop)
-  {
+  @include responsive(small_desktop) {
     font-size: $xl;
   }
 }
 
-.not-found__emoji
-{
+.not-found__emoji {
   width: $spacing_40;
 
-  @include responsive(small_desktop)
-  {
+  @include responsive(small_desktop) {
     width: $spacing_64;
   }
 }
 
-.not-found__subtitle
-{
+.not-found__subtitle {
   max-width: $spacing_320;
   margin: $spacing_20 0;
   font-size: $h5;
   line-height: 1.5;
   text-align: center;
 
-  @include responsive(small_desktop)
-  {
+  @include responsive(small_desktop) {
     font-size: $h4;
   }
 }
 
-.not-found__description
-{
+.not-found__description {
   font-size: $sm;
   text-align: center;
 
-  @include responsive(small_desktop)
-  {
+  @include responsive(small_desktop) {
     font-size: $h6;
   }
 }
 
-.not-found__button
-{
+.not-found__button {
   margin-top: $spacing_40;
   padding: $spacing_8 $spacing_32;
   color: $gray_100;
@@ -120,13 +103,11 @@
 
   @include font_weight(semi_bold);
 
-  &:hover
-  {
+  &:hover {
     transform: scale(1.05);
   }
 
-  &:active
-  {
+  &:active {
     transform: scale(0.95);
   }
 }
