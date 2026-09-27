@@ -37,12 +37,12 @@ RewriteRule ^ %1 [L,R=301]
                                 application/json \
                                 application/x-font-ttf \
                                 application/xml \
-                                font/opentype \
                                 image/svg+xml \
                                 image/x-icon \
                                 text/css \
                                 text/html \
-                                text/plain
+                                text/plain \
+                                font/opentype
 </IfModule>
 
 # 5. Performance: Leveraged Browser Caching (Expires)
