@@ -6,7 +6,7 @@ import { inlineCss } from 'astro-inline-css';
 import { defineConfig } from 'astro/config';
 import { resolve } from 'node:path';
 
-import { environment } from './src/global/configuration/environment_configuration';
+import { environment } from './src/global/configuration/env_config';
 
 const { BASE_URL, PORT, NODE_ENV: ENV } = environment;
 const dirname = resolve();
