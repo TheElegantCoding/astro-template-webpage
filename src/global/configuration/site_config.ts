@@ -1,4 +1,4 @@
-const siteConfiguration = {
+const siteConfig = {
   metaAuthor: {
     author: {
       email: 'astralysoftware@gmail.com',
@@ -34,4 +34,4 @@ const siteConfiguration = {
   googleAnalyticId: ''
 };
 
-export { siteConfiguration };
+export { siteConfig as siteConfiguration };
