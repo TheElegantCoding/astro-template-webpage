@@ -52,6 +52,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "cSpell.words": ["gtag", "partytown"]
+  }
 }
