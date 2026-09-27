@@ -49,8 +49,8 @@
 - [x] compress image
 - [x] transform img to webp and avif
 - [x] modern formats webp and avif
-- [ ] aspect ratio
-- [ ] responsive images with srcset and sizes
+- [x] aspect ratio
+- [x] responsive images with srcset and sizes
 
 ## SEO
 
@@ -85,15 +85,15 @@
 
 - [x] issue template
 - [x] code of conduct
-- [x] pull request template 
+- [x] pull request template
 - [x] bug report template
 - [x] doc suggestion template
 - [x] feature request template
 - [x] questions template
 - [x] codeowners
-- [ ] commit lint
-- [ ] semantic release
-- [ ] changelog
+- [x] commit lint
+- [x] semantic release
+- [x] changelog
 
 ## Configuration files
 
@@ -119,12 +119,12 @@
 - [ ] update readme
 - [ ] setup vitest
 - [ ] add testing
-- [ ] testing de siteConfiguration (all obligated properties are correctly placed) include pwa config
+- [ ] testing de siteConfiguration (all obligated properties are correctly placed)
 - [ ] add testing for string.ts
 - [ ] add testing for link.ts
 - [ ] add testing for replace_extension.ts
 - [ ] add testing for language.ts
 - [ ] add testing for animation.ts
-- [ ] custom logs for deploy 
+- [ ] custom logs for deploy
 - [ ] script to create files automatically
-- [ ] diagonal skeleton and change color of skeleton (should skeleton be just one class and not a component ?)
+- [x] diagonal skeleton and change color of skeleton (should skeleton be just one class and not a component ?)
