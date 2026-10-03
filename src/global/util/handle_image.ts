@@ -19,7 +19,8 @@ type HandleImageParameters = {
   readonly height?: number;
   readonly formats: string[];
   readonly quality?: ImageQuality;
-  readonly layout?: 'none' | 'fixed' | 'full-width' | 'constrained';
+  readonly sourceWidths?: number[];
+  readonly layout?: 'none' | 'fixed' | 'full-width' | 'constrained' | undefined;
 };
 
 type GetOptimizedImagesParameters = Omit<HandleImageParameters, 'source'> & {
@@ -65,21 +66,24 @@ const getOptimizedImages = async ({
   layout,
   formats,
   width,
-  height
+  height,
+  sourceWidths
 }: GetOptimizedImagesParameters) => {
   const formatImages = formats.map(async (format) => {
     const isLocal = isLocalImageSource(source);
-    const finalWidth = width ?? (isLocal ? source.width : undefined);
-    const finalHeight = height ?? (isLocal ? source.height : undefined);
+
+    const finalWidth = sourceWidths ? undefined : width ?? (isLocal ? source.width : undefined);
+    const finalHeight = sourceWidths ? undefined : height ?? (isLocal ? source.height : undefined);
 
     return getImage({
       src: source,
       quality,
       sizes,
       layout,
-      inferSize: !width && !height,
+      inferSize: !width && !height && !sourceWidths,
       width: finalWidth,
       height: finalHeight,
+      widths: sourceWidths,
       format
     }) as Promise<GetImageResult>;
   });
@@ -91,6 +95,7 @@ const handleImage = async ({
   source,
   sizes,
   quality,
+  sourceWidths,
   formats,
   layout
 }: HandleImageParameters) => {
@@ -103,7 +108,8 @@ const handleImage = async ({
     quality,
     sizes,
     layout,
-    formats: optimizedFormats
+    formats: optimizedFormats,
+    sourceWidths
   });
 
   return {
