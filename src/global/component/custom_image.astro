@@ -18,6 +18,8 @@ type Props = HTMLAttributes<'img'> & {
   readonly classSkeleton?: string;
   readonly quality?: ImageQuality;
   readonly disableLoader?: boolean;
+  readonly densities?: number[];
+  readonly sourceWidths?: number[];
   readonly layout?: 'none' | 'fixed' | 'full-width' | 'constrained';
 };
 
@@ -27,6 +29,7 @@ const {
   sizes,
   formats = ['avif', 'webp'],
   layout,
+  sourceWidths,
   width,
   height,
   quality,
@@ -44,7 +47,8 @@ const { image, sources } = await handleImage({
   layout,
   quality,
   width,
-  height
+  height,
+  sourceWidths
 });
 ---
 <Skeleton
@@ -58,7 +62,7 @@ const { image, sources } = await handleImage({
       return (
         <source
           type={`image/${img.options.format}`}
-          srcset={img.attributes.srcSet || img.src}
+          srcset={img.srcSet?.attribute || img.src}
         />
       );
     })}
