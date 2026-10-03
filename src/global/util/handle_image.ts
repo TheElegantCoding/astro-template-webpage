@@ -1,3 +1,4 @@
+/* eslint-disable ts/no-unsafe-call */
 import { getImage } from 'astro:assets';
 
 import type {
@@ -34,7 +35,7 @@ const isLocalImageSource = (source: null | OptimizableSource): source is LocalIm
 };
 
 const findLocalImageSource = (source: string): undefined | LocalImageSource => {
-  const allImages = import.meta.glob('/src/**/*.{jpeg,jpg,png,gif,webp,avif}', { eager: true });
+  const allImages = import.meta.glob('/src/**/*.{jpeg,jpg,png,gif,webp,avif}', { eager: true }) as Record<string, { default: LocalImageSource }>;
   const allImagesTyped = allImages as Record<string, { default: LocalImageSource }>;
   const fullPath = Object.keys(allImagesTyped).find((path) => { return path.includes(source); }) as string;
   const rawFormat = fullPath.split('.').at(-1) as ImageInputFormat;
@@ -80,7 +81,7 @@ const getOptimizedImages = async ({
       width: finalWidth,
       height: finalHeight,
       format
-    });
+    }) as Promise<GetImageResult>;
   });
 
   return Promise.all(formatImages);
