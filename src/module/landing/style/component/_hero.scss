@@ -12,7 +12,7 @@
 .hero__title {
   margin-top: 2rem;
   font-size: $h1;
-  font-weight: font-weight(bold);
+  font-weight: font_weight(bold);
   color: $white;
 
   @include responsive(tablet) {
