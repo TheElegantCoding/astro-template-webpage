@@ -1,3 +1,4 @@
+/* stylelint-disable scss/at-function-pattern */
 @use 'sass:map';
 
 $font_weight: (
@@ -9,7 +10,7 @@ $font_weight: (
   'extra_bold': 800
 );
 
-@function font-weight($weight) {
+@function font_weight($weight) {
   @if map.has-key($font_weight, $weight) {
     @return map.get($font_weight, $weight);
   }
