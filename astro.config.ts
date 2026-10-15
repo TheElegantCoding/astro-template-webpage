@@ -56,7 +56,9 @@ export default defineConfig({
     envDir: './src/global/env',
     css: {
       preprocessorOptions: {
-        scss: { loadPaths: [resolve(dirname, 'src')] }
+        scss: {
+          loadPaths: [resolve(dirname, 'src')]
+        }
       }
     }
   }
