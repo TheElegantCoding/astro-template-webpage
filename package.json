@@ -15,7 +15,7 @@
     "dev": "astro dev",
     "check": "astro check",
     "preview": "astro preview",
-    "build": "rm -rf ./dist && astro check && astro build",
+    "build": "rm -rf ./dist && astro check && bun lint && astro build",
     "lint": "bun lint:eslint && bun lint:stylelint && bun lint:terraform",
     "lint:eslint": "eslint . --fix --cache",
     "lint:stylelint": "stylelint ./src/**/*.{scss,css} --fix",
