@@ -220,5 +220,17 @@
 - [ ] 📦 @name/bundler-analyzer
 - [ ] 📦 @name/readme-generator
 
+- [ ] 📦 @name/porkbun-terraform
+
 - [ ] 📦 @name/structured-types
 - [ ] 📦 @name/open-graph-types
+
+# Boilerplate web
+
+- [ ] 📦 astro-template
+- [ ] 📦 react-template
+- [ ] 📦 nextjs-template
+  - [ ] sass version
+  - [ ] tailwind version
+- [ ] 📦 typescript-template
+- [ ] 📦 bun-server-template
