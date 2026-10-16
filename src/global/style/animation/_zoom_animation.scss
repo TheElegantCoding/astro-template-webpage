@@ -1,4 +1,4 @@
-@use '../config' as *;
+@use 'config' as *;
 
 [data-animate].zoom-in {
   transform: scale(0.5);
