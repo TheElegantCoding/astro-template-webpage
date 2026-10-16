@@ -57,7 +57,7 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          loadPaths: [resolve(dirname, 'src')]
+          loadPaths: [resolve(dirname, 'src'), resolve(dirname, 'src/global/style')]
         }
       }
     }
