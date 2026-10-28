@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import { siteConfiguration } from '@global/configuration/site_config';
 
-export const GET = async () => {
+export const GET = () => {
   return rss({
     description: siteConfiguration.description,
     items: [],
