@@ -8,6 +8,7 @@ type Props = HTMLAttributes<'span'> & {
 
 const { class: classImage, visible = true, ...rest } = Astro.props;
 ---
+
 <span
   class='skeleton'
   aria-hidden={visible ? 'false' : 'true'}
