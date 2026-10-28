@@ -1,12 +1,14 @@
-import partytown from '@astrojs/partytown';
-import sitemap from '@astrojs/sitemap';
+import { environment } from './src/global/configuration/env_config';
+
 import { classShortener } from 'astro-class-shortener';
 import { compress } from 'astro-crush';
 import { inlineCss } from 'astro-inline-css';
 import { defineConfig } from 'astro/config';
-import { resolve } from 'node:path';
 
-import { environment } from './src/global/configuration/env_config';
+import partytown from '@astrojs/partytown';
+import sitemap from '@astrojs/sitemap';
+
+import { resolve } from 'node:path';
 
 const { BASE_URL, PORT, NODE_ENV: ENV } = environment;
 const dirname = resolve();
@@ -34,11 +36,7 @@ export default defineConfig({
   ],
   security: {
     csp: {
-      directives: [
-        "object-src 'none'",
-        "frame-ancestors 'none'",
-        "base-uri 'self'"
-      ],
+      directives: ["object-src 'none'", "frame-ancestors 'none'", "base-uri 'self'"],
       styleDirective: {
         hashes: ['sha256-INLINE_CSS_HASH']
       }
