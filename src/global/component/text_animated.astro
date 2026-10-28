@@ -6,11 +6,9 @@ type Props = HTMLAttributes<'p'> & {
   delay?: number;
 };
 
-const {
-  class: classTextAnimated,
-  delay = 0.05,
-  ...rest
-} = Astro.props;
+const defaultDelay = 0.05;
+
+const { class: classTextAnimated, delay = defaultDelay, ...rest } = Astro.props;
 
 const rawText = await Astro.slots.render('default');
 
@@ -22,7 +20,11 @@ const cleanText = rawText
 
 const words = cleanText ? cleanText.split(' ') : [];
 ---
-<p aria-label={cleanText} class:list={classTextAnimated}>
+
+<p
+  aria-label={cleanText}
+  class:list={classTextAnimated}
+>
   <span aria-hidden='true'>
     {words.map((word, index) => {
       return (
