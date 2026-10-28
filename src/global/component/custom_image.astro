@@ -1,7 +1,7 @@
 ---
-import { handleImage } from '@global/util/handle_image';
-
 import Skeleton from './skeleton.astro';
+
+import { handleImage } from '@global/util/handle_image';
 
 import type { ImageQuality } from 'astro';
 import type { HTMLAttributes } from 'astro/types';
@@ -51,6 +51,7 @@ const { image, sources } = await handleImage({
   sourceWidths
 });
 ---
+
 <Skeleton
   class='custom-image'
   visible={!disableLoader}
