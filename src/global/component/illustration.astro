@@ -8,19 +8,19 @@ type Props = HTMLAttributes<'svg'> & {
   readonly title?: string;
 };
 
-const {
-  class: classIllustration,
-  name,
-  title,
-  ...rest
-} = Astro.props;
+const { class: classIllustration, name, title, ...rest } = Astro.props;
 
-const modules = import.meta.glob<{ default: string }>(['/src/global/asset/illustration/*.svg', '/src/module/**/asset/illustration/*.svg'], {
-  eager: true,
-  query: '?raw'
+const modules = import.meta.glob<{ default: string }>(
+  ['/src/global/asset/illustration/*.svg', '/src/module/**/asset/illustration/*.svg'],
+  {
+    eager: true,
+    query: '?raw'
+  }
+);
+
+const path = Object.keys(modules).find((illustration) => {
+  return illustration.endsWith(`/${name}.svg`);
 });
-
-const path = Object.keys(modules).find((illustration) => { return illustration.endsWith(`/${name}.svg`); });
 const rawSvg = (path ? modules[path]?.default : undefined) as string;
 
 if (!rawSvg) {
@@ -37,6 +37,7 @@ const iconContent = rawSvg.slice(rawSvg.indexOf('>') + 1, rawSvg.indexOf('</svg>
 const iconTitle = title ? `<title>${capitalizeFirst(title)}</title>` : '';
 const iconRaw = `${iconTitle}${iconContent}`;
 ---
+
 <svg
   width={iconWidth}
   set:html={iconRaw}
