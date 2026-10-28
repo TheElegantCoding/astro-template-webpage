@@ -1,7 +1,7 @@
 {
   "lintStaged": {
     "*.astro": "bunx astro check",
-    "*.{ts,js,jsx,tsx,json,html,yml,yaml,astro}": "bunx eslint --fix",
+    "*.{ts,js,jsx,tsx,astro}": "bunx oxlint --fix",
     "*.{css,scss}": "bunx stylelint --fix",
     "*.{tf,tfvars}": "terraform fmt -recursive"
   },
