@@ -10,13 +10,7 @@ type Props = HTMLAttributes<'a'> & {
   readonly target?: '_top' | '_self' | '_blank' | '_parent';
 };
 
-const {
-  addLanguage = true,
-  href,
-  rel: relationship,
-  target,
-  ...rest
-} = Astro.props;
+const { addLanguage = true, href, rel: relationship, target, ...rest } = Astro.props;
 
 const link = externalLink({
   addLanguage,
@@ -27,6 +21,7 @@ const link = externalLink({
   url: Astro.url
 });
 ---
+
 <a
   rel={link.rel}
   href={link.href}
