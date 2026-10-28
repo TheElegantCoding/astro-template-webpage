@@ -10,29 +10,28 @@ type Props = HTMLAttributes<'svg'> & {
   readonly class?: string;
 };
 
-const {
-  class: classIcon,
-  name,
-  size = 32,
-  title,
-  ...rest
-} = Astro.props;
+const defaultSize = 32;
 
-const modules = import.meta.glob<{ default: string }>(['/src/global/asset/icon/*.svg', '/src/module/**/asset/icon/*.svg'], {
-  eager: true,
-  query: '?raw'
+const { class: classIcon, name, size = defaultSize, title, ...rest } = Astro.props;
+
+const modules = import.meta.glob<{ default: string }>(
+  ['/src/global/asset/icon/*.svg', '/src/module/**/asset/icon/*.svg'],
+  {
+    eager: true,
+    query: '?raw'
+  }
+);
+
+const iconPath = Object.keys(modules).find((path) => {
+  return path.endsWith(`/${name}.svg`);
 });
-
-const iconPath = Object.keys(modules).find((path) => { return path.endsWith(`/${name}.svg`); });
 const rawSvg = iconPath ? modules[iconPath]?.default : undefined;
 
 if (!rawSvg) {
   throw new Error(`Icon "${name}" not found in global or module assets.`);
 }
 
-const innerSVG = (rawSvg as string)
-  .replace(/<svg[^>]*>/, '')
-  .replace(/<\/svg>/, '');
+const innerSVG = (rawSvg as string).replace(/<svg[^>]*>/, '').replace(/<\/svg>/, '');
 
 const widthMatch = rawSvg.match(/width="(?<width>.*?)"/);
 const heightMatch = rawSvg.match(/height="(?<height>.*?)"/);
@@ -42,6 +41,7 @@ const iconHeight = heightMatch ? heightMatch.groups?.height : '500';
 
 const iconTitle = title ? `<title>${capitalizeFirst(title)}</title>` : '';
 ---
+
 <svg
   class:list={classIcon}
   width={iconWidth ?? size}
