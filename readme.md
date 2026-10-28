@@ -103,7 +103,7 @@ Ditch the struggle and focus on what matters most - crafting impactful content t
 
 - <img src="./.github/asset/icon/astro.svg" width="24px" align="center" /> `Astro` - Astro Framework
 - <img src="./.github/asset/icon/typescript.svg" width="24px" align="center" /> `Typescript` - Extremely strict type checking
-  - <img src="./.github/asset/icon/check.svg" width="20px" align="center" /> `Absolute imports` -  No more bad imports
+  - <img src="./.github/asset/icon/check.svg" width="20px" align="center" /> `Absolute imports` - No more bad imports
 - <img src="./.github/asset/icon/sass.svg" width="24px" align="center" /> `Sass` - Css framework for ui development
   - <img src="./.github/asset/icon/check.svg" width="20px" align="center" /> `BEMIT` - Arquitecture for sass
   - <img src="./.github/asset/icon/check.svg" width="20px" align="center" /> `Mobile firts` - Best performance for css
@@ -249,15 +249,13 @@ BASE_URL=http://localhost:$PORT
 1.- To start using i18n in this project you have to add the languages you want to support in the configuration file `src/global/configuration/site_configuration.ts`, here you will find an object with the key `languages`, also remenber to ser the default language to your preferences, you can set the languages like this:
 
 ```ts
-const siteConfiguration =
-{
+const siteConfiguration = {
   defaultLanguage: 'en',
-  languages:
-  {
+  languages: {
     en: 'English',
     es: 'Español'
   }
-}
+};
 ```
 
 2.- Next you will create in the `src/pages` a directory called `[language]`, here you will duplicate and put all the pages of your project, this is an example:
@@ -287,21 +285,17 @@ export const getStaticPaths = getStaticLanguage;
 4.- Next you will create the translation files, we recommend to use ts files instead of json but you can aslo use json files
 
 ```ts
-const aboutUsLocale =
-{
-  en:
-  {
-    welcome: 'Hello world',
+const aboutUsLocale = {
+  en: {
+    welcome: 'Hello world'
   },
-  es:
-  {
-    welcome: 'Hola mundo',
+  es: {
+    welcome: 'Hola mundo'
   }
 };
 
 export { aboutUsLocale };
 ```
-
 
 5.- To end you will use this file and make the translation, use this inside you component page and not in the `pages/**` components
 
@@ -320,13 +314,12 @@ const i18n = getI18n(language, aboutUsLocale);
 6.- Create the file `src/middleware.ts` and add the following code, this will redirect the default language urls to the base urls, and examples of this is, `/en/about-us` redirect to `/about-us`
 
 ```ts
-import { getLanguagePathname, validateDefaultLanguage } from '@global/util/language';
 import { defineMiddleware } from 'astro/middleware';
 
-const onRequest = defineMiddleware(async (context, next) =>
-{
-  if(validateDefaultLanguage(context.url))
-  {
+import { getLanguagePathname, validateDefaultLanguage } from '@global/util/language';
+
+const onRequest = defineMiddleware(async (context, next) => {
+  if (validateDefaultLanguage(context.url)) {
     const pathname = getLanguagePathname(context.url);
     const redirectCode = 302;
 
