@@ -2,6 +2,7 @@
   "recommendations": [
     "astro-build.astro-vscode",
     "streetsidesoftware.code-spell-checker",
+    "oxc.oxc-vscode",
     "webben.browserslist",
     "EditorConfig.EditorConfig",
     "mrmlnc.vscode-scss",

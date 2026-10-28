@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Astro: Dev Server",
+      "command": "bun",
+      "args": ["run", "dev"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "astro",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^(ERROR|WARNING):\\s*(.*)$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*(dev server running|Local:).*",
+          "endsPattern": ".*(Ready|Network:).*"
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Astro: Build",
+      "command": "bun",
+      "args": ["run", "build"],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "type": "shell",
+      "label": "Astro: Check Types",
+      "command": "bun",
+      "args": ["run", "astro", "check"],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

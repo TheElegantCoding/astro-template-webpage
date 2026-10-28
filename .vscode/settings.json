@@ -1,59 +1,14 @@
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.suggest.showWords": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
+    "source.fixAll.oxc": "always",
     "source.addMissingImports": "explicit",
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "never",
+    "source.organizeImports.oxc": "explicit"
   },
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "js/ts.format.enabled": false,
-  "js/ts.format.placeOpenBraceOnNewLineForControlBlocks": true,
-  "js/ts.format.placeOpenBraceOnNewLineForFunctions": true,
-  "js/ts.preferences.importModuleSpecifier": "non-relative",
-  "eslint.run": "onSave",
-  "eslint.options": {
-    "cache": true,
-    "cacheLocation": ".eslintcache"
-  },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro",
-    "typescript",
-    "typescriptreact",
-    "html",
-    "json",
-    "jsonc",
-    "json5",
-    "yaml",
-    "github-actions-workflow"
-  ],
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[astro]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
+  "js/ts.preferences.importModuleSpecifier": "non-relative"
 }
