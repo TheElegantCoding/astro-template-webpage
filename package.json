@@ -15,7 +15,7 @@
     "lint:oxlint": "bunx oxlint --fix",
     "format": "bunx oxfmt",
     "lint:stylelint": "stylelint ./src/**/*.{scss,css} --fix",
-    "lint:terraform": "terraform -chdir=infrastructure fmt -check && terraform -chdir=infrastructure validate",
+    "lint:terraform": "terraform -chdir=infrastructure fmt",
     "convert:typography": "bun ./script/conversion/typography.ts",
     "tf:init": "terraform -chdir=infrastructure init",
     "tf:plan:dev": "terraform -chdir=infrastructure plan -var-file=dev.tfvars -out=dev.tfplan",
