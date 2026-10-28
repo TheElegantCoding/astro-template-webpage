@@ -21,12 +21,7 @@ const removeTrailingSlash = (url: URL | string) => {
   return url.toString().replace(/\/$/v, '');
 };
 
-const validateExternalLink = (
-  link: LinkType,
-  href: URL | string,
-  relationship?: string,
-  target?: string
-) => {
+const validateExternalLink = (link: LinkType, href: URL | string, relationship?: string, target?: string) => {
   const updatedLink = { ...link };
   const isExternal = href.toString().startsWith('http') || href.toString().startsWith('//');
 
@@ -38,13 +33,7 @@ const validateExternalLink = (
   return updatedLink;
 };
 
-const externalLink = ({
-  href,
-  relationship,
-  site,
-  target,
-  url
-}: ExternalLinkParameter): LinkType => {
+const externalLink = ({ href, relationship, site, target, url }: ExternalLinkParameter): LinkType => {
   const finalHref = removeTrailingSlash(new URL(href, site ?? url.origin));
 
   let link: LinkType = {
@@ -53,18 +42,9 @@ const externalLink = ({
     target: undefined
   };
 
-  link = validateExternalLink(
-    link,
-    href,
-    relationship,
-    target
-  );
+  link = validateExternalLink(link, href, relationship, target);
 
   return link;
 };
 
-export {
-  externalLink,
-  removeLeadingSlash,
-  removeTrailingSlash
-};
+export { externalLink, removeLeadingSlash, removeTrailingSlash };
