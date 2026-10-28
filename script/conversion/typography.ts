@@ -1,7 +1,9 @@
+import ttf2woff from 'ttf2woff';
+
 import { findAllFiles } from '@script/util/file';
+
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import ttf2woff from 'ttf2woff';
 
 const convertTypography = () => {
   const ttfFiles = findAllFiles('.ttf');
