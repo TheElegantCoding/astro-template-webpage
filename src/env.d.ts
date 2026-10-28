@@ -13,12 +13,14 @@ type ImportMetaEnv = {
 };
 
 declare module 'virtual:pwa-info' {
-  export const pwaInfo: undefined | {
-    webManifest: {
-      href: string;
-      linkTag: string;
-    };
-  };
+  export const pwaInfo:
+    | undefined
+    | {
+        webManifest: {
+          href: string;
+          linkTag: string;
+        };
+      };
 }
 
 declare module 'virtual:pwa-register' {
@@ -30,12 +32,9 @@ declare module 'virtual:pwa-register' {
     onRegistered?: (registration: undefined | ServiceWorkerRegistration) => void;
   };
 
-  function registerSW (options?: RegisterSWOptions): (reloadPage?: boolean) => Promise<void>;
+  function registerSW(options?: RegisterSWOptions): (reloadPage?: boolean) => Promise<void>;
 
-  export {
-    registerSW,
-    RegisterSWOptions
-  };
+  export { registerSW, RegisterSWOptions };
 }
 
 interface ImportMeta {
