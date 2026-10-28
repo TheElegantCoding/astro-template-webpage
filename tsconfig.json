@@ -1,53 +1,13 @@
 {
+  "extends": ["@stacklys/tsconfig/strict", "@stacklys/tsconfig/dom"],
   "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "lib": [
-      "ESNext",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "baseUrl": "./",
-    "rootDir": "./",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
     "paths": {
-      "@global/*": ["src/global/*"],
-      "@module/*": ["src/module/*"],
-      "@public/*": ["public/*"],
-      "@script/*": ["script/*"]
-    },
-    "ignoreDeprecations": "6.0",
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-    "allowJs": true,
-    "strict": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "exactOptionalPropertyTypes": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "useUnknownInCatchVariables": true,
-    "newLine": "lf",
-    "noEmit": true,
-    "removeComments": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+      "@global/*": ["./src/global/*"],
+      "@module/*": ["./src/module/*"],
+      "@public/*": ["./public/*"],
+      "@script/*": ["./script/*"]
+    }
   },
-  "include": ["./.astro/types.d.ts", "./**/*"],
+  "include": ["./src/**/*"],
   "exclude": ["./dist"]
 }
