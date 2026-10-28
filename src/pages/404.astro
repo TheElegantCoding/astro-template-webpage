@@ -4,20 +4,25 @@ import Link from '@global/component/link.astro';
 import { siteConfiguration } from '@global/configuration/site_config';
 import BaseLayout from '@global/layout/base_layout.astro';
 ---
+
 <BaseLayout
   title={`${siteConfiguration.siteName} | Pagina no encontrada`}
-  keywords={[
-    '404, pagina no encontrada',
-    'volver al inicio',
-    '404 error'
-  ]}
+  keywords={['404, pagina no encontrada', 'volver al inicio', '404 error']}
   description='La página que solicitaste parece haberse tomado unas vacaciones. Regrese a la página de inicio y continúe su viaje.'
 >
   <div class='not-found base-layout'>
-    <h1 data-animate='zoom-in' class='not-found__letter'>404</h1>
+    <h1
+      data-animate='zoom-in'
+      class='not-found__letter'
+    >
+      404
+    </h1>
     <div class='not-found__container'>
       <div class='not-found__container-title'>
-        <p class='not-found__title' data-animate='fade-in-up delay-20'>
+        <p
+          class='not-found__title'
+          data-animate='fade-in-up delay-20'
+        >
           Oops
         </p>
         <CustomImage
@@ -29,14 +34,23 @@ import BaseLayout from '@global/layout/base_layout.astro';
           src='/asset/image/emoji_thinking_face.png'
         />
       </div>
-      <p class='not-found__subtitle' data-animate='fade-in-up delay-40'>
+      <p
+        class='not-found__subtitle'
+        data-animate='fade-in-up delay-40'
+      >
         Algo salió mal, creo que estas perdido
       </p>
-      <p class='not-found__description' data-animate='fade-in-up delay-60'>
+      <p
+        class='not-found__description'
+        data-animate='fade-in-up delay-60'
+      >
         Error 404 página no encontrada
       </p>
       <div data-animate='fade-in-up delay-80'>
-        <Link href='/' class='not-found__button'>
+        <Link
+          href='/'
+          class='not-found__button'
+        >
           Volver al inicio
         </Link>
       </div>
