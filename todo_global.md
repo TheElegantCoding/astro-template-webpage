@@ -2,25 +2,24 @@
 
 ## 1.- Basic packages and configurations
 
-- [ ] ⚙️ Editorconfig
-- [ ] 📦 Tsconfig
-  - [ ] 📦 Strict typescript config
-  - [ ] ⚙️ Absolute imports configuration
-- [ ] 📦 Browserlist
-- [ ] ⚙️ Package.json configuration
-  - [ ] ⚙️️️ Name
-  - [ ] ⚙️️️ Description
-  - [ ] ⚙️️️ Author
-  - [ ] ⚙️️️ Engines
-  - [ ] ⚙️️️ Version
-  - [ ] ⚙️️️ Scripts
-  - [ ] ⚙️️️ Keywords
-  - [ ] ⚙️️️ Repository
-  - [ ] ⚙️️️ Bugs
-  - [ ] ⚙️️️ Homepage
-- [ ] ⚙️ Package manager enforcement (Corepack / engines rules)
-- [ ] ⚙️ Npm configuration
-- [ ] ⚙️ Node Version Manager configuration (.nvmrc / .node-version)
+- [x] ⚙️ Editorconfig
+- [x] 📦 Tsconfig
+  - [x] 📦 Strict typescript config
+  - [x] ⚙️ Absolute imports configuration
+- [x] 📦 Browserlist
+- [x] ⚙️ Package.json configuration
+  - [x] ⚙️️️ Name
+  - [x] ⚙️️️ Description
+  - [x] ⚙️️️ Author
+  - [x] ⚙️️️ Engines
+  - [x] ⚙️️️ Version
+  - [x] ⚙️️️ Scripts
+  - [x] ⚙️️️ Keywords
+  - [x] ⚙️️️ Repository
+  - [x] ⚙️️️ Bugs
+  - [x] ⚙️️️ Homepage
+- [x] ⚙️ Package manager enforcement (Engines)
+- [x] ⚙️ Npm configuration
 
 ## 2.- Linting and formatting
 
@@ -31,14 +30,13 @@
 
 ## 3.- Git and github
 
-- [ ] ⚙️ Git ignore
-- [ ] ⚙️ Git attributes
-- [ ] ⚙️ Git branch strategy configuration
-- [ ] ⚙️ Pull request template configuration
-- [ ] ⚙️ Documentation request template
-- [ ] ⚙️ Feature request template
-- [ ] ⚙️ Issue template configuration
-- [ ] ⚙️ Question template configuration
+- [x] ⚙️ Git ignore
+- [x] ⚙️ Git attributes
+- [x] ⚙️ Pull request template configuration
+- [x] ⚙️ Documentation request template
+- [x] ⚙️ Feature request template
+- [x] ⚙️ Issue template configuration
+- [x] ⚙️ Question template configuration
 - [ ] 📦 Git hooks configuration
   - [ ] 📦 Commit message convention configuration
   - [ ] 📦 Commit template configuration
@@ -47,10 +45,10 @@
 
 ## 4.- VSCode and environment workspace
 
-- [ ] ⚙️ Recommended extensions configuration (extensions.json)
-- [ ] ⚙️ Default editor settings (settings.json)
-- [ ] ⚙️ Tasks configuration (tasks.json)
-- [ ] ⚙️ Launch configuration for debugging (launch.json)
+- [x] ⚙️ Recommended extensions configuration (extensions.json)
+- [x] ⚙️ Default editor settings (settings.json)
+- [x] ⚙️ Tasks configuration (tasks.json)
+- [x] ⚙️ Launch configuration for debugging (launch.json)
 
 ## 5.- Environment configuration
 
@@ -70,15 +68,12 @@
 
 - [ ] 📦 Bundle analyzer
 - [ ] 📦 Lighthouse performance analysis configuration
-- [ ] ⚙ Detection of code dead (knip)
-- [ ] ⚙ Dependency audit configuration (npm audit automatizado en CI)
-- [ ] ⚙️ Secret detection / GitGuardian ignore configuration (para evitar filtrar tokens de AWS o NPM por error)
+- [x] ⚙ Dependency audit configuration (npm audit automatizado en CI)
 
 ## 8.- Testing and quality assurance
 
 - [ ] ⚙ Vitest configuration (Unit & integration testing)
 - [ ] ⚙ Playwright configuration (End-to-End multi-browser testing)
-
 
 ## 9.- HTML and SEO best practices
 
@@ -190,7 +185,6 @@
   - [ ] ⚙ Build & Deploy CD: Automated frontend build and `aws s3 sync` to the bucket
   - [ ] ⚙ Post-Deploy pipeline: CloudFront cache invalidation script (`aws cloudfront create-invalidation`)
 
-
 # Packages to build
 
 - [ ] 📦 @name/tsconfig
@@ -225,6 +219,8 @@
 - [ ] 📦 @name/structured-types
 - [ ] 📦 @name/open-graph-types
 
+- [ ] 📦 @name/cli
+
 # Boilerplate web
 
 - [ ] 📦 astro-template
@@ -234,3 +230,21 @@
   - [ ] tailwind version
 - [ ] 📦 typescript-template
 - [ ] 📦 bun-server-template
+
+# CLI
+
+- [ ] Generate gitignore files
+- [ ] Generate package.json files
+- [ ] Generate README files
+- [ ] Generate LICENSE files
+
+# Readme
+
+- [ ] Information for git branch strategy
+- [ ] Information for commit message conventions
+- [ ] Information for pull request template
+- [ ] Information for issue tracking and management
+- [ ] Information for release management
+- [ ] Information for package management
+- [ ] Information for linters
+- [ ] Information for tsconfig and absolute paths
