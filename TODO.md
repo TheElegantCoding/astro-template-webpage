@@ -29,8 +29,8 @@
 - [x] mobile first
 - [x] reset css
 - [x] vendor prefixes
-- [x] remove unused css
 - [x] join media queries
+- [x] remove unused css
 - [x] critical css
 - [x] class name shortener
 
