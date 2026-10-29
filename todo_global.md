@@ -24,9 +24,9 @@
 ## 2.- Linting and formatting
 
 - [ ] 📦 ESLint configuration
+- [ ] 📦 Oxlint configuration
 - [ ] 📦 Prettier configuration
 - [ ] 📦 Stylelint configuration
-- [ ] 📦 Markdownlint configuration
 
 ## 3.- Git and github
 
@@ -59,10 +59,7 @@
 
 ## 6.- Documentation
 
-- [ ] ⚙️ README template
-- [ ] 📦 Readme generation tool
-  - [ ] 📦 Multi block readme generation
-  - [ ] 📦 i18n readme
+- [ ] ⚙️ README
 
 ## 7.- Project analysis
 
@@ -187,39 +184,36 @@
 
 # Packages to build
 
-- [ ] 📦 @name/tsconfig
-- [ ] 📦 @name/eslint-config
-- [ ] 📦 @name/stylelint-config
-- [ ] 📦 @name/prettier-config
-- [ ] 📦 @name/markdown-config
-- [ ] 📦 @name/browserlist-config
+- [x] 📦 @stacklys/tsconfig
+- [ ] 📦 @stacklys/eslint-config
+- [x] 📦 @stacklys/oxlint-config
+- [ ] 📦 @stacklys/stylelint-config
+- [ ] 📦 @stacklys/prettier-config
+- [x] 📦 @stacklys/browserlist-config
 
-- [ ] 📦 @name/git-hooks
+- [ ] 📦 @stacklys/git-hooks
+- [ ] 📦 @stacklys/logger
+- [ ] 📦 @stacklys/tokens-css
+- [ ] 📦 @stacklys/environment-variables
+- [ ] 📦 @stacklys/font-conversion
+- [ ] 📦 @stacklys/image-compression
+- [ ] 📦 @stacklys/performance-analyzer-with-lighthouse
+- [ ] 📦 @stacklys/bundler-analyzer
 
-- [ ] 📦 @name/logger
+- [ ] 📦 @stacklys/i18n
+- [ ] 📦 @stacklys/i18n-astro
+- [ ] 📦 @stacklys/astro-seo-engine
+- [ ] 📦 @stacklys/astro-compression
+- [ ] 📦 @stacklys/astro-inline-css
+- [ ] 📦 @stacklys/astro-class-shortener
+- [ ] 📦 @stacklys/sitemap-generator
 
-- [ ] 📦 @name/tokens-css
+- [ ] 📦 @stacklys/porkbun-terraform
 
-- [ ] 📦 @name/i18n
-- [ ] 📦 @name/i18n-astro
-- [ ] 📦 @name/font-conversion
-- [ ] 📦 @name/astro-seo-engine
-- [ ] 📦 @name/astro-compression
-- [ ] 📦 @name/astro-inline-css
-- [ ] 📦 @name/astro-class-shortener
-- [ ] 📦 @name/environment-variables
-- [ ] 📦 @name/image-compression
-- [ ] 📦 @name/sitemap-generator
-- [ ] 📦 @name/performance-analyzer-with-lighthouse
-- [ ] 📦 @name/bundler-analyzer
-- [ ] 📦 @name/readme-generator
+- [ ] 📦 @stacklys/structured-types
+- [ ] 📦 @stacklys/open-graph-types
 
-- [ ] 📦 @name/porkbun-terraform
-
-- [ ] 📦 @name/structured-types
-- [ ] 📦 @name/open-graph-types
-
-- [ ] 📦 @name/cli
+- [ ] 📦 @stacklys/cli
 
 # Boilerplate web
 
