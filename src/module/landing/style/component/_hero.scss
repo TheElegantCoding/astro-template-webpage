@@ -6,13 +6,14 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  font-weight: weight(regular);
   background-color: $gray_950;
 }
 
 .hero__title {
   margin-top: 2rem;
   font-size: $h1;
-  font-weight: font_weight(bold);
+  font-weight: weight(bold);
   color: $white;
 
   @include responsive(tablet) {
