@@ -11,10 +11,9 @@
 
 .not-found__letter {
   font-size: 40vw;
+  font-weight: weight(extra_bold);
   color: $gray_100;
   text-shadow: 0 $spacing_8 $spacing_32 rgba($black, 0.3);
-
-  @include font_weight(extra_bold);
 
   @include responsive(small_desktop) {
     position: absolute;
@@ -51,9 +50,8 @@
 
 .not-found__title {
   font-size: $h1;
+  font-weight: weight(extra_bold);
   text-align: center;
-
-  @include font_weight(extra_bold);
 
   @include responsive(desktop) {
     font-size: $xl2;
@@ -96,12 +94,11 @@
 .not-found__button {
   margin-top: $spacing_40;
   padding: $spacing_8 $spacing_32;
+  font-weight: weight(semi_bold);
   color: $gray_100;
   background-color: $gray_950;
   border-radius: $rounded_large;
   transition: transform 0.5s;
-
-  @include font_weight(semi_bold);
 
   &:hover {
     transform: scale(1.05);
