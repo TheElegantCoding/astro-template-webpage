@@ -9,7 +9,7 @@ $font_weight: (
   'extra_bold': 800
 );
 
-@function font_weight($weight) {
+@function weight($weight) {
   @if map.has-key($font_weight, $weight) {
     @return map.get($font_weight, $weight);
   }
