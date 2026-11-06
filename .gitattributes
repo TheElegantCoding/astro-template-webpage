@@ -1,74 +1,70 @@
-# set default behavior to automatically normalize line endings.
-* text=auto
+# Normalize line endings by default
+* text=auto eol=lf
 
-# source code
-*.bat text eol=crlf
-*.cmd text eol=crlf
-*.ps1 text eol=crlf
-*.bash text eol=lf
-*.sh text eol=lf
-*.js text eol=lf
-*.mjs text eol=lf
-*.cjs text eol=lf
-*.jsx text eol=lf
-*.ts text eol=lf
-*.tsx text eol=lf
-*.json text eol=lf
-*.html text eol=lf
-*.css text eol=lf
-*.scss text eol=lf
-*.md text eol=lf
-*.txt text eol=lf
-*.yaml text eol=lf
-*.yml text eol=lf
-*.xml text eol=lf
-*.webmanifest text eol=lf
-*.astro text eol=lf
-*.svg text eol=lf
+# Source and config
+*.sh        text eol=lf
+*.bash      text eol=lf
+*.zsh       text eol=lf
+*.fish      text eol=lf
+*.lua       text eol=lf
+*.py        text eol=lf
+*.js        text eol=lf
+*.mjs       text eol=lf
+*.cjs       text eol=lf
+*.ts        text eol=lf
+*.jsx       text eol=lf
+*.tsx       text eol=lf
+*.json      text eol=lf
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.toml      text eol=lf
+*.ini       text eol=lf
+*.conf      text eol=lf
+*.service   text eol=lf
+*.desktop   text eol=lf
+*.rasi      text eol=lf
+*.html      text eol=lf
+*.css       text eol=lf
+*.scss      text eol=lf
+*.xml       text eol=lf
+*.svg       text eol=lf
+*.md        text eol=lf
+*.txt       text eol=lf
 
-# config & locks
-*.env.* text eol=lf
-*.env text eol=lf
-.example.* text eol=lf
-.editorconfig text eol=lf
+# Dotfiles and env
+*.env       text eol=lf
+*.env.*     text eol=lf
+*.example   text eol=lf
+*rc         text eol=lf
+*ignore     text eol=lf
+.editorconfig  text eol=lf
 .gitattributes text eol=lf
-.htaccess text eol=lf
-.browserslist* text eol=lf
-bun.lockb binary
 
-# rc and ignore files
-*.*rc text eol=lf
-*.*ignore text eol=lf
+# Binary: archives, documents, images
+*.7z    binary
+*.gz    binary
+*.rar   binary
+*.tar   binary
+*.zip   binary
+*.pdf   binary
+*.psd   binary
+*.ai    binary
+*.gif   binary
+*.ico   binary
+*.jpg   binary
+*.png   binary
+*.webp  binary
+*.avif  binary
 
-# archives & binary media
-*.7z binary
-*.gz binary
-*.jar binary
-*.rar binary
-*.tar binary
-*.zip binary
-*.pdf binary
-*.psd binary
-*.ai binary
-*.gif binary
-*.ico binary
-*.jpg binary
-*.png binary
-*.webp binary
-*.avif binary
-
-# video, audio & fonts
-*.mp4 binary
-*.webm binary
-*.mov binary
-*.mp3 binary
-*.ogg binary
-*.wav binary
-*.ttf binary
-*.eot binary
-*.otf binary
-*.woff binary
+# Binary: media and fonts
+*.mp4   binary
+*.webm  binary
+*.mov   binary
+*.mp3   binary
+*.ogg   binary
+*.wav   binary
+*.ttf   binary
+*.otf   binary
+*.eot   binary
+*.woff  binary
 *.woff2 binary
-
-# executable
-*.exe binary
