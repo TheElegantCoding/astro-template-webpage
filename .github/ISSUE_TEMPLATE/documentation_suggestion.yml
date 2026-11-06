@@ -1,7 +1,7 @@
-name: 📝 Documentation suggestion
+name: Documentation suggestion
 description: Suggestions on how we can improve the documentation.
-labels: [📝 documentation]
-title: '[📝]'
+labels: [documentation]
+title: '[docs]'
 body:
   - type: markdown
     attributes:
