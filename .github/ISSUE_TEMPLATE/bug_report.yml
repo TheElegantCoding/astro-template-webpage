@@ -1,14 +1,13 @@
-name: 🐛 Bug report
+name: Bug report
 description: Create a report to help us improve
-labels: [🐛 bug]
-title: '[🐛]'
+labels: [bug]
+title: '[bug]'
 body:
   - type: markdown
     attributes:
       value: |
         Thank you for reporting an issue :pray:.
         Before submitting a new bug/issue,
-        please check the links below to see if there is a solution or question posted there already
         The more information you fill in, the better the community can help you.
   - type: textarea
     id: description
@@ -17,24 +16,10 @@ body:
       description: Provide a clear and concise description of the challenge you are running into.
     validations:
       required: true
-  - type: input
-    id: link
-    attributes:
-      label: Your Example Website or App
-      description: |
-        Which website or app were you using when the bug happened?
-        Note:
-        - Your bug will may get fixed much faster if we can run your code.
-        - To create a shareable code example you can use Stackblitz (https://stackblitz.com/). Please no localhost URLs.
-        - Please read these tips for providing a minimal example: https://stackoverflow.com/help/mcve.
-      placeholder: |
-        e.g. https://stackblitz.com/edit/...... OR Github Repo
-    validations:
-      required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to Reproduce the Bug or Issue
+      label: Steps to reproduce the bug or issue
       description: Describe the steps we have to take to reproduce the behavior.
       placeholder: |
         1. Go to '...'
@@ -60,7 +45,7 @@ body:
         If applicable, add screenshots or a video to help explain your problem.
         For more information on the supported file image/file types and the file size limits, please refer
         to the following link: https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/attaching-files
-        placeholder: |
+      placeholder: |
         You can drag your video or image files inside of this editor ↓
   - type: textarea
     id: platform
