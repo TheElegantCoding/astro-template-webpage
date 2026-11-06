@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: 🤔 Question
-    url: https://github.com
+  - name: Question
+    url: https://github.com/TheElegantCoding/astro-template-webpage
     about: This issue tracker is not for support questions. Please post your question on the Discord chat.
