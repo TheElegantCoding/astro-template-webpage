@@ -1,14 +1,11 @@
 {
   "editor.formatOnSave": true,
-  "editor.suggest.showWords": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.fixAll.oxc": "always",
+    "source.fixAll.terraform": "explicit",
     "source.addMissingImports": "explicit",
     "source.organizeImports": "never",
     "source.organizeImports.oxc": "explicit"
-  },
-  "editor.defaultFormatter": "oxc.oxc-vscode",
-  "js/ts.format.enabled": false,
-  "js/ts.preferences.importModuleSpecifier": "non-relative"
+  }
 }
